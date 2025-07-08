@@ -40,11 +40,9 @@ namespace LogicaNegocio.Entidades
             Active = active;
         }
 
-
-
-        
-
-
-
+        public void validar()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

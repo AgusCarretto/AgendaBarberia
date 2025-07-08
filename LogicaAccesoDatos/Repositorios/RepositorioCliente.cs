@@ -27,8 +27,8 @@ namespace LogicaAccesoDatos.Repositorios
             cliente.validar();
             if (!this.Existe(cliente))
             {
-            context.Clientes.Add(cliente);
-            context.SaveChanges();
+                context.Clientes.Add(cliente);
+                context.SaveChanges();
             }
             else
             {
@@ -43,7 +43,7 @@ namespace LogicaAccesoDatos.Repositorios
                 context.Clientes.Remove(cliente);
                 context.SaveChanges();
             }
-            else 
+            else
             {
                 throw new Exception("El cliente no existe.");
             }
@@ -65,7 +65,7 @@ namespace LogicaAccesoDatos.Repositorios
         }
 
 
-            public List<Cliente> GetAll()
+        public List<Cliente> GetAll()
         {
             return context.Clientes.ToList();
         }
