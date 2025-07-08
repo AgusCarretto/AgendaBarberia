@@ -20,17 +20,17 @@ namespace LogicaAccesoDatos.EF
 
         public DbSet<Turno> Turnos { get; set; }
 
-        public class ProyectoContextFactory : IDesignTimeDbContextFactory<ProyectoContext>
-        {
-            public ProyectoContext CreateDbContext(string[] args)
-            {
-                var optionsBuilder = new DbContextOptionsBuilder<ProyectoContext>();
+        //public class ProyectoContextFactory : IDesignTimeDbContextFactory<ProyectoContext>
+        //{
+        //    public ProyectoContext CreateDbContext(string[] args)
+        //    {
+        //        var optionsBuilder = new DbContextOptionsBuilder<ProyectoContext>();
 
-                optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=BarberiaProject;Integrated Security=True;Encrypt=False");
+        //        optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=BarberiaProject;Integrated Security=True;Encrypt=False");
 
-                return new ProyectoContext(optionsBuilder.Options);
-            }
-        }
+        //        return new ProyectoContext(optionsBuilder.Options);
+        //    }
+        //}
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -45,9 +45,9 @@ namespace LogicaAccesoDatos.EF
 
         }
 
-        public ProyectoContext(DbContextOptions<ProyectoContext> options) : base(options)
-        {
-        }
+        //public ProyectoContext(DbContextOptions<ProyectoContext> options) : base(options)
+        //{
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

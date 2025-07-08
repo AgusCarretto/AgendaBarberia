@@ -39,17 +39,9 @@ namespace LogicaNegocio.Entidades
           
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
+        public void validar()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
